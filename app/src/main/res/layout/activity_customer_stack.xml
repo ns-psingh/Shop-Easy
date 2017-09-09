@@ -69,13 +69,6 @@
             android:padding="5dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:hint="Price"></TextView>
-        <TextView
-            android:id="@+id/t6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:hint="Quantity"></TextView>
 
 
     </TableLayout>
@@ -84,11 +77,23 @@
         android:text="ADD TO CART"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/add"
         android:background="?attr/actionModeSplitBackground"
         android:textColor="@android:color/background_light"
         android:layout_marginBottom="59dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/rfidstatus"
         android:layout_alignStart="@+id/rfidstatus" />
+
+    <Button
+        android:text="VIEW CART"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add"
+        android:layout_alignRight="@+id/rfidstatus"
+        android:layout_alignEnd="@+id/rfidstatus"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/viewc"
+        android:layout_alignLeft="@+id/add"
+        android:layout_alignStart="@+id/add" />
 </RelativeLayout>

@@ -21,15 +21,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Click here if OTP is not recieved."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/otp"
-        android:layout_marginBottom="29dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <EditText
         android:layout_width="80dp"
         android:layout_height="wrap_content"
@@ -52,5 +43,17 @@
         android:layout_alignRight="@+id/otpent"
         android:layout_alignEnd="@+id/otpent"
         android:layout_marginTop="40dp" />
+
+    <Button
+        android:text="Click here if OTP is not recieved."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/otp"
+        android:background="?attr/actionModeSplitBackground"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
 
 </RelativeLayout>

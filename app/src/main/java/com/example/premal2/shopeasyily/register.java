@@ -30,6 +30,14 @@ public class register extends AppCompatActivity {
                 startActivity(x);
             }
         });
+        Button reg=(Button) findViewById(R.id.register);
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent x= new Intent(register.this, MainActivity.class);
+                startActivity(x);
+            }
+        });
 
 
     }
