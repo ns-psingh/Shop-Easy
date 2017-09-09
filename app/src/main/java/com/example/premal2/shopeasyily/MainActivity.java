@@ -5,12 +5,20 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
 import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,10 +38,17 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent o=new Intent(MainActivity.this,OTP.class);
-                startActivity(o);
+                EditText e=(EditText) findViewById(R.id.mobileno);
+                String m= e.getText().toString();
+                if(m.length()==0)
+                {Toast.makeText(getApplicationContext(), "Please enter the mobile number!"+m,
+                        Toast.LENGTH_SHORT).show();}
+                else
+                {Intent o=new Intent(MainActivity.this,OTP.class);
+                startActivity(o);}
             }
         });
+
     }
     private int otppass()
     {

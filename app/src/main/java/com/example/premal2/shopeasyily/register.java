@@ -1,14 +1,18 @@
 package com.example.premal2.shopeasyily;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
-import static com.example.premal2.shopeasyily.R.id.back;
-import static com.example.premal2.shopeasyily.R.id.button;
+
 
 public class register extends AppCompatActivity {
 
@@ -17,6 +21,7 @@ public class register extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         Button back= (Button) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +30,8 @@ public class register extends AppCompatActivity {
                 startActivity(x);
             }
         });
+
+
     }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -46,4 +53,7 @@ public class register extends AppCompatActivity {
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+
+
+
 }

@@ -11,6 +11,7 @@ import android.support.v7.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -22,6 +23,8 @@ public class OTP extends AppCompatActivity {
         setContentView(R.layout.activity_otp);
         Button otp= (Button) findViewById(R.id.otp);
         final EditText et=(EditText) findViewById(R.id.otpent);
+        Random rand=new Random();
+        y=rand.nextInt(8999)+1000;
         otppass();
         otp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,20 +36,22 @@ public class OTP extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                   // final int x2=Integer.parseInt(et.toString());
-                    //if(x2==y)
-                    //{
-                        Intent o = new Intent(OTP.this, Home.class);
-                        startActivity(o);
-                    //}
+                        String y3= et.getText().toString();
+                        int z=Integer.valueOf(y3);
+                        if(y==z)
+                        {Intent o = new Intent(OTP.this, Home.class);
+                        startActivity(o);}
+                        else
+                        {
+                            Toast.makeText(getApplicationContext(), "Invalid!",
+                                    Toast.LENGTH_SHORT).show();
+                        }
             }
         });
     }
     private void otppass()
     {
 
-        Random rand=new Random();
-        y=rand.nextInt(8999)+1000;
         NotificationCompat.Builder builder= (NotificationCompat.Builder) new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.abc)
                 .setContentTitle("ShopEasily")
