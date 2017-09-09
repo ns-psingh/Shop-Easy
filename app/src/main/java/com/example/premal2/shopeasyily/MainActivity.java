@@ -19,7 +19,6 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.Random;
 
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
